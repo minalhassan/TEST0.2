@@ -113,7 +113,48 @@
             </div>
         </div>
     </div>
+     <button class="download-btn" onclick="downloadCertificate()">Download as PDF</button>
+ <script>
+        // Function to populate the certificate with input values
+        function generateCertificate() {
+            const recipientName = document.getElementById('recipient-name').value;
+            const assignmentScore = document.getElementById('assignment-score').value;
+            const quizScore = document.getElementById('quiz-score').value;
+            const liveTestScore = document.getElementById('live-test-score').value;
+            const ctfScore = document.getElementById('ctf-score').value;
+            const studentId = document.getElementById('student-id').value;
+            const courseDuration = document.getElementById('course-duration').value;
 
-    <script src="script.js"></script>
+            document.getElementById('recipient-name-display').textContent = recipientName;
+            document.getElementById('strong-tag-display').textContent = recipientName;
+            document.getElementById('assignment-score-display').textContent = `${assignmentScore}%`;
+            document.getElementById('quiz-score-display').textContent = `${quizScore}%`;
+            document.getElementById('live-test-score-display').textContent = `${liveTestScore}%`;
+            document.getElementById('ctf-score-display').textContent = `${ctfScore}%`;
+            document.getElementById('student-id-display').textContent = studentId;
+            document.getElementById('course-duration-display').textContent = courseDuration;
+        }
+
+        // Function to download the certificate as PDF
+function downloadCertificate() {
+    const certificate = document.getElementById('certificate');
+    const options = {
+        margin: 0,
+        filename: 'certificate.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+
+    // Check if the certificate element exists
+    if (certificate) {
+        html2pdf().from(certificate).set(options).save();
+    } else {
+        console.error('Certificate element not found');
+    }
+}
+
+        
+    </script>
 </body>
 </html>
