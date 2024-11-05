@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Template</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    
+    <!-- Form for Inputs -->
+    <div class="form">
+        <label for="recipientName">Recipient Name:</label>
+        <input type="text" id="recipientName" placeholder="Enter Recipient Name">
+
+        <label for="assignmentScore">Assignment Score:</label>
+        <input type="number" id="assignmentScore" placeholder="Enter Assignment Score">
+
+        <label for="quizScore">Quiz Score:</label>
+        <input type="number" id="quizScore" placeholder="Enter Quiz Score">
+
+        <label for="liveTestScore">Live Test Score:</label>
+        <input type="number" id="liveTestScore" placeholder="Enter Live Test Score">
+
+        <label for="ctfScore">CTF Score:</label>
+        <input type="number" id="ctfScore" placeholder="Enter CTF Score">
+
+        <label for="studentId">Student ID:</label>
+        <input type="text" id="studentId" placeholder="Enter Student ID">
+
+        <label for="courseDuration">Course Duration:</label>
+        <input type="text" id="courseDuration" placeholder="Enter Course Duration (e.g., '6 MONTHS')">
+
+        <button onclick="generateCertificate()">Generate Certificate</button>
+    </div>
+
+    <!-- Certificate Template -->
+    <div class="certificate" id="certificate">
+        <div class="border-top"></div>
+        <div class="border-bottom"></div>
+
+        <div class="content">
+            <!-- Header -->
+            <div class="header">
+                <img src="logo.png" alt="CB Logo" class="logo"> <!-- Replace with your logo path -->
+                <h1>Cyber Bangla</h1>
+            </div>
+
+            <!-- Certificate Title -->
+            <div class="title">
+                <h2>CERTIFICATE</h2>
+                <p>of Assessment</p>
+            </div>
+
+            <!-- Recipient Name -->
+            <div class="recipient">
+                <h3 id="displayRecipientName">[Recipient Name]</h3>
+                <p>Has successfully completed the online live course on</p>
+            </div>
+
+            <!-- Course Name -->
+            <div class="course-name">
+                <h4>COURSE ETHICAL HACKING AND CYBERSECURITY</h4>
+                <p>We commend <strong id="displayRecipientStrong">[Recipient Name]</strong> for exemplary performance throughout the course and dedication to enhancing expertise in cybersecurity.</p>
+            </div>
+
+            <!-- Exam Types and Results Table -->
+            <div class="results-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Exam Type</th>
+                            <th>Result (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Assignment</td>
+                            <td id="displayAssignmentScore">[Assignment Score]</td>
+                        </tr>
+                        <tr>
+                            <td>Quiz</td>
+                            <td id="displayQuizScore">[Quiz Score]</td>
+                        </tr>
+                        <tr>
+                            <td>Live Test</td>
+                            <td id="displayLiveTestScore">[Live Test Score]</td>
+                        </tr>
+                        <tr>
+                            <td>CTF</td>
+                            <td id="displayCtfScore">[CTF Score]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Footer with Signatures -->
+            <div class="footer">
+                <div class="signature">
+                    <p>Foysal</p>
+                    <span>Founder & CEO</span>
+                </div>
+
+                <div class="signature">
+                    <p>Rakib Ahmed</p>
+                    <span>Managing Director</span>
+                </div>
+                <div class="details">
+                    <p id="displayStudentId">STUDENT ID: [Student ID]</p>
+                    <p id="displayCourseDuration">COURSE DURATION: [Course Duration]</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

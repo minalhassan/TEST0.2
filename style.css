@@ -1,0 +1,223 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+}
+
+/* Form Container */
+.form {
+    width: 400px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.form label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    font-size: 14px;
+    color: #555;
+}
+
+.form input[type="text"],
+.form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form button:hover {
+    background-color: #218838;
+}
+
+/* Certificate Styling */
+.certificate {
+    position: relative;
+    width: 800px;
+    padding: 40px;
+    background: #fff url('bg.png') center/cover no-repeat;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.border-top,
+.border-bottom {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #322d2d;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.border-top {
+    top: 0;
+    left: 0;
+}
+
+.border-bottom {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.content {
+    text-align: center;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+.logo {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 1.8em;
+    color: #25A334;
+    font-weight: bold;
+}
+
+.title h2 {
+    font-size: 3em;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.title p {
+    font-size: 1.3em;
+    font-weight: 400;
+    color: #777;
+    margin-top: 5px;
+}
+
+.recipient h3 {
+    font-size: 2em;
+    font-weight: 600;
+    margin: 20px 0 10px;
+}
+
+.recipient p {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 5px;
+}
+
+.course-name h4 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.course-name p {
+    font-size: 1em;
+    color: #555;
+    margin: 10px 20px;
+    line-height: 1.5;
+}
+
+.results-table {
+    margin: 30px auto;
+    width: 80%;
+}
+
+.results-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.results-table th,
+.results-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.results-table th {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.results-table td {
+    font-size: 1em;
+    color: #555;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 0 solid #ddd;
+    height: 150px;
+}
+
+.signature {
+    text-align: center;
+    justify-content: space-between;
+}
+
+.signature p {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.signature span {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.details {
+    text-align: center;
+    font-size: 0.9em;
+    color: #333;
+    font-weight: 500;
+    margin-top: 10px;
+}
